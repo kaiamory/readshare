@@ -32,7 +32,11 @@
 
       <dt>Author</dt>
       <!-- Display author_id start -->
-      <dd><%= book.author_id %></dd>
+      <dd>
+        <% if @book.author_writer.present? %>
+          <%= link_to book.author_writer, book.author_writer %>
+        <% end %>
+      </dd>
       <!-- Display author_id end -->
 
       <dt>Book cover</dt>
