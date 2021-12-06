@@ -12,6 +12,10 @@ class BookResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :author_writer,
+             resource: AuthorResource,
+             foreign_key: :author_id
+
   has_many   :reviews
 
   # Indirect associations
