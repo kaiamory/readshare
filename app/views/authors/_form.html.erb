@@ -42,7 +42,7 @@
 
     <%= f.label :headshot %>
     <!-- Input for headshot start -->
-    <%= f.text_field :headshot, class: headshot_class, placeholder: "Enter headshot" %>
+    <%= f.file_field :headshot, class: "form-control" %>
     <!-- Input for headshot end -->
     <% if headshot_was_invalid %>
       <% author.errors.full_messages_for(:headshot).each do |message| %>

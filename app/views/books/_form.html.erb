@@ -172,7 +172,7 @@
 
     <%= f.label :book_cover %>
     <!-- Input for book_cover start -->
-    <%= f.text_field :book_cover, class: book_cover_class, placeholder: "Enter book cover" %>
+    <%= f.file_field :book_cover, class: "form-control" %>
     <!-- Input for book_cover end -->
     <% if book_cover_was_invalid %>
       <% book.errors.full_messages_for(:book_cover).each do |message| %>

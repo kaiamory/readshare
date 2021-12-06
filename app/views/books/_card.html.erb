@@ -37,7 +37,9 @@
 
       <dt>Book cover</dt>
       <!-- Display book_cover start -->
-      <dd><%= book.book_cover %></dd>
+      <dd>
+        <%= cl_image_tag @book.book_cover, class: "img-fluid" %>
+      </dd>
       <!-- Display book_cover end -->
 
     </dl>

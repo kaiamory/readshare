@@ -12,7 +12,9 @@
 
       <dt>Headshot</dt>
       <!-- Display headshot start -->
-      <dd><%= author.headshot %></dd>
+      <dd>
+        <%= cl_image_tag @author.headshot, class: "img-fluid" %>
+      </dd>
       <!-- Display headshot end -->
 
     </dl>

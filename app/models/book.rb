@@ -1,4 +1,6 @@
 class Book < ApplicationRecord
+  mount_uploader :book_cover, BookCoverUploader
+
   # Direct associations
 
   belongs_to :author_writer,

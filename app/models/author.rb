@@ -1,4 +1,6 @@
 class Author < ApplicationRecord
+  mount_uploader :headshot, HeadshotUploader
+
   # Direct associations
 
   has_many   :books,
