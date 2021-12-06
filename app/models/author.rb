@@ -4,7 +4,7 @@ class Author < ApplicationRecord
   # Direct associations
 
   has_many   :books,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
@@ -15,5 +15,4 @@ class Author < ApplicationRecord
   def to_s
     name
   end
-
 end

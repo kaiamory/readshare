@@ -14,5 +14,4 @@ class ReviewResource < ApplicationResource
   belongs_to :book
 
   # Indirect associations
-
 end

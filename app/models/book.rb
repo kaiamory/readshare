@@ -4,21 +4,21 @@ class Book < ApplicationRecord
   # Direct associations
 
   belongs_to :author_writer,
-             :class_name => "Author",
-             :foreign_key => "author_id"
+             class_name: "Author",
+             foreign_key: "author_id"
 
   has_many   :reviews,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
   has_many   :user_readers,
-             :through => :reviews,
-             :source => :user
+             through: :reviews,
+             source: :user
 
   has_many   :users,
-             :through => :reviews,
-             :source => :user
+             through: :reviews,
+             source: :user
 
   # Validations
 
@@ -27,5 +27,4 @@ class Book < ApplicationRecord
   def to_s
     name
   end
-
 end

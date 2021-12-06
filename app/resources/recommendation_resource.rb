@@ -14,5 +14,4 @@ class RecommendationResource < ApplicationResource
              resource: UserResource
 
   # Indirect associations
-
 end

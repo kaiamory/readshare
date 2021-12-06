@@ -1,29 +1,28 @@
 class User < ApplicationRecord
-  
   include JwtToken
-# Direct associations
+  # Direct associations
 
   has_many   :book_recommendations,
-             :class_name => "Recommendation",
-             :foreign_key => "recipient_id",
-             :dependent => :destroy
+             class_name: "Recommendation",
+             foreign_key: "recipient_id",
+             dependent: :destroy
 
   has_many   :recommendations,
-             :foreign_key => "sender_id",
-             :dependent => :destroy
+             foreign_key: "sender_id",
+             dependent: :destroy
 
   has_many   :reviews,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
   has_many   :books_novels,
-             :through => :reviews,
-             :source => :book
+             through: :reviews,
+             source: :book
 
   has_many   :books,
-             :through => :reviews,
-             :source => :book
+             through: :reviews,
+             source: :book
 
   # Validations
 
