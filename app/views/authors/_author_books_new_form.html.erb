@@ -1,0 +1,72 @@
+<!-- Form book start -->
+<%= form_with(model: @book, local: true) do |f| %>
+<!-- Form book end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <%= f.label :name %>
+
+    <!-- Input for name start -->
+    <%= f.text_field :name, class: "form-control" %>
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for author start -->
+  <div class="form-group">
+    <%= f.label :author %>
+
+    <!-- Input for author start -->
+    <%= f.text_field :author, class: "form-control" %>
+    <!-- Input for author end -->
+  </div>
+  <!-- Label and input for author end -->
+
+  <!-- Label and input for genre start -->
+  <div class="form-group">
+    <%= f.label :genre %>
+
+    <!-- Input for genre start -->
+    <%= f.text_field :genre, class: "form-control" %>
+    <!-- Input for genre end -->
+  </div>
+  <!-- Label and input for genre end -->
+
+  <!-- Label and input for page_length start -->
+  <div class="form-group">
+    <%= f.label :page_length %>
+
+    <!-- Input for page_length start -->
+    <%= f.text_field :page_length, class: "form-control" %>
+    <!-- Input for page_length end -->
+  </div>
+  <!-- Label and input for page_length end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <%= f.label :user_id %>
+
+    <!-- Input for user_id start -->
+    <%= f.text_field :user_id, class: "form-control" %>
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for author_id start -->
+  <!-- Input for author_id start -->
+  <%= f.hidden_field :author_id, value: @author.id %>
+  <!-- Input for author_id end -->
+  <!-- Label and input for author_id end -->
+
+  <!-- Label and input for book_cover start -->
+  <div class="form-group">
+    <%= f.label :book_cover %>
+
+    <!-- Input for book_cover start -->
+    <%= f.text_field :book_cover, class: "form-control" %>
+    <!-- Input for book_cover end -->
+  </div>
+  <!-- Label and input for book_cover end -->
+
+  <%= f.submit "Create book", class: "btn btn-block btn-outline-secondary" %>
+<% end %>
